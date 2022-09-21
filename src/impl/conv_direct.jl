@@ -108,7 +108,7 @@ function conv_direct!(
                     c_in, c_out]
             dotprod = muladd(x_val, w_val, dotprod)
         end
-        y[w_idx, h_idx, d_idx, c_out, batch] = alpha*dotprod + beta*y[w_idx, h_idx, d_idx, c_out, batch]
+        y[w_idx, h_idx, d_idx, c_out, batch] = alpha*dotprod + (beta ? y[w_idx, h_idx, d_idx, c_out, batch] : 0)
     end
 
     # Next, do potentially-padded regions:
@@ -151,7 +151,7 @@ function conv_direct!(
             end
         end
 
-        y[w_idx, h_idx, d_idx, c_out, batch] = alpha*dotprod + beta*y[w_idx, h_idx, d_idx, c_out, batch]
+        y[w_idx, h_idx, d_idx, c_out, batch] = alpha*dotprod + (beta ? y[w_idx, h_idx, d_idx, c_out, batch] : 0)
     end
 
     return y

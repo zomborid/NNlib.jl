@@ -37,7 +37,7 @@
 # TODO: should we also add
 #   STEP X:
 #        use homogeneus datatypes
-# to handle etherogeneus inputs now handled by conv_direct?
+# to handle heterogeneus inputs now handled by conv_direct?
 
 
 ########## STEP 1 ############
