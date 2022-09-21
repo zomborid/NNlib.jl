@@ -1,3 +1,6 @@
+# Changes
+- Fix issue [FluxML/Flux.jl#1189](https://github.com/FluxML/Flux.jl/issues/1189), access to undefined reference
+
 # NNlib.jl
 
 [![CI](https://github.com/FluxML/NNlib.jl/actions/workflows/ci.yml/badge.svg)](https://github.com/FluxML/NNlib.jl/actions/workflows/ci.yml)
